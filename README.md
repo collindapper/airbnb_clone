@@ -1,6 +1,6 @@
 # README
 
-Visit [Altcademy Classroom](https://www.altcademy.com/classroom/) for more instructions.
+Airbnb Clone 
 
 1. Install GEMS
 
