@@ -15,5 +15,4 @@ Rails.application.routes.draw do
     get '/authenticated' => 'sessions#authenticated'
 
   end
-
 end
