@@ -1,7 +1,7 @@
 // add_property.jsx
 import React from 'react';
 import Layout from '@src/layout';
-import { safeCredentialsFormData, handleErrors } from '@utils/fetchHelper';
+import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 // Importing stylesheet
 import './add_property.scss';
@@ -59,7 +59,7 @@ class AddProperty extends React.Component {
       formData.append('property[image]', this.state.image, this.state.image.name);
     }
 
-    fetch('/api/properties', safeCredentialsFormData({
+    fetch('/api/properties', safeCredentials({
       method: 'POST',
       body: formData,
     }))

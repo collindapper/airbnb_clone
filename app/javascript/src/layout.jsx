@@ -3,9 +3,9 @@ import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 // Importing FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAirbnb, faTwitter, faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faAirbnb, faTwitter, faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // Importing stylesheet
 import './home.scss';
@@ -70,7 +70,7 @@ class Layout extends React.Component  {
 
             ? <nav className="navbar navbar-expand d-flex justify-content-between" id="navbar">
                 <a className="navbar-brand text-danger" href="/">
-                  <FontAwesomeIcon icon={faAirbnb} size="lg"/>
+                  
                   <b className="pl-2" >airbnb</b>
                 </a>
                 <div>
@@ -78,7 +78,7 @@ class Layout extends React.Component  {
                   <button type="submit" className="btn btn-hosting-menu p-2 mx-2" onClick={this.showHostingMenuFunc}>
                     Hosting
                     <span className="ml-2">
-                      <FontAwesomeIcon icon={faChevronDown} />
+                      
                     </span>
                     
                     {(showHostingMenu)
@@ -104,7 +104,7 @@ class Layout extends React.Component  {
 
             : <nav className="navbar navbar-expand d-flex justify-content-between" id="navbar">
                 <a className="navbar-brand text-danger" href="/">
-                  <FontAwesomeIcon icon={faAirbnb} size="lg"/>
+                  
                   <b className="pl-2" >airbnb</b>
                 </a>
                 <a className="btn btn-outline-danger btn-login" href="/login">Log in</a>
@@ -170,14 +170,7 @@ class Layout extends React.Component  {
                     </ul>
                   </div>
               </div>
-              <div className="col-12 col-xl-auto order-1 order-xl-2">
-                <div className="text-left text-md-center">
-                  <a href="#" className="text-body"><FontAwesomeIcon icon={faTwitter} size="lg" className="ml-2" /></a>
-                  <a href="#" className="text-body"><FontAwesomeIcon icon={faInstagram} size="lg" className="ml-2" /></a>
-                  <a href="#" className="text-body"><FontAwesomeIcon icon={faLinkedin} size="lg" className="ml-2" /></a>
-                  <a href="#" className="text-body"><FontAwesomeIcon icon={faFacebook} size="lg" className="ml-2" /></a>
-                </div>
-              </div>
+              
             </div>
           </div>
         </footer>

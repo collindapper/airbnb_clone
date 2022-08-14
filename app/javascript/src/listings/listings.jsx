@@ -4,8 +4,8 @@ import Layout from '@src/layout';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 // Importing FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 // Importing stylesheet
 import './listings.scss';

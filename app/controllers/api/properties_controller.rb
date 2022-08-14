@@ -21,7 +21,7 @@ module Api
       @property = user.properties.new(property_params)
 
       if @property.save
-        render 'api/propertties/create'
+        render 'api/properties/create'
       end
     end
 
@@ -37,7 +37,7 @@ module Api
       return render 'not_found', status: :not_found if not @property
       return render 'bad_request', status: :bad_request if not @property.update(property_params)
 
-      render 'api/properties/show, status: :ok'
+      render 'api/properties/show', status: :ok
     end
 
     def destroy
@@ -72,9 +72,9 @@ module Api
 
     private
 
-    def property_params
-      params.require(:property).permit(:title, :description, :city, :country, :property_type, :price_per_night, :max_guests, :bedrooms, :beds, :baths, :user, :image)
-    end
-    
+      def property_params
+        params.require(:property).permit(:title, :description, :city, :country, :property_type, :price_per_night, :max_guests, :bedrooms, :beds, :baths, :user, :image)
+      end
+
   end
 end
