@@ -42,8 +42,6 @@ gem 'aws-sdk-s3', '~> 1.112'
 # Webrick
 gem "webrick", "~> 1.7"
 
- # Use sqlite3 as the database for Active Record
- # gem 'sqlite3', '~> 1.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -74,6 +72,9 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # Use sqlite3 as the database for Active Record
+ gem 'sqlite3', '~> 1.4.2'
 end
 
 group :production do
