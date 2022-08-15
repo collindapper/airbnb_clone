@@ -43,7 +43,7 @@ gem 'aws-sdk-s3', '~> 1.112'
 gem "webrick", "~> 1.7"
 
  # Use sqlite3 as the database for Active Record
- gem 'sqlite3', '~> 1.4.2'
+ # gem 'sqlite3', '~> 1.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
