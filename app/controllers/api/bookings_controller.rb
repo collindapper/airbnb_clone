@@ -24,6 +24,35 @@ module Api
       render 'api/bookings/index'
     end
 
+    def get_properties_bookings
+      user = User.find_by(username: params[:username])
+
+      if user
+        @bookings = []
+
+        user.properties.each do |property|
+          @bookings += property.bookings
+        end
+      end
+
+      render 'api/bookings/index'
+    end
+
+    def show
+      @booking = Booking.find_by(id: params[:id])
+      return render json: { error: 'Cannot find booking' }, status: :not_found if !@booking
+      render 'api/bookings/show'
+    end
+
+    def index_by_user
+      user = User.find_by(username: params[:username])
+
+      if user
+        @bookings = user.bookings
+        render 'api/bookings/index'
+      end
+    end
+
     private
 
     def booking_params
