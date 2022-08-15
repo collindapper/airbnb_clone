@@ -2,11 +2,6 @@
 import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
-// Importing FontAwesome
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faAirbnb, faTwitter, faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
-// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
 // Importing stylesheet
 import './home.scss';
 
