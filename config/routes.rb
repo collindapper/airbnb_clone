@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/:username/reservations'                => 'static_pages#reservations'
   get '/booking/:id/success'        => 'static_pages#booking_success'
 
+
   namespace :api do
     # Add routes below this line
     # resources :users, only: [:create]
@@ -46,4 +47,5 @@ Rails.application.routes.draw do
 
   end
 
+  get '*path' => 'static_pages#home'
 end
