@@ -61,7 +61,7 @@ class Listings extends React.Component {
         <div className="container py-4">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h4 className="mb-0">My listings</h4>
-            <a className="btn btn-my-bookings p-2 mx-2" role="button" href={`/${this.props.data.username}/add-property`}><FontAwesomeIcon icon={ faPlus } className="mr-2" />Add a new property</a>
+            <a className="btn btn-my-bookings p-2 mx-2" role="button" href={`/${this.props.data.username}/add-property`}>Add a new property</a>
           </div>
           {(userProperties.length != 0)
           
