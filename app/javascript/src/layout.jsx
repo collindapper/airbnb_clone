@@ -44,7 +44,7 @@ class Layout extends React.Component  {
     }))
       .then(handleErrors)
       .then(data => {
-        // console.log('data', data)
+        console.log('data', data)
         if (data.success) {
           this.setState({
             authenticated: false,
