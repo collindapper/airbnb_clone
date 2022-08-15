@@ -70,16 +70,12 @@ class Layout extends React.Component  {
 
             ? <nav className="navbar navbar-expand d-flex justify-content-between" id="navbar">
                 <a className="navbar-brand text-danger" href="/">
-                  
-                  <b className="pl-2" >airbnb</b>
+                  <b >airbnb</b>
                 </a>
-                <div>
+                <div className="me-auto">
                   <a className="btn btn-my-bookings p-2 mx-2" role="button" href={`/${username}/bookings`}>My bookings</a>
                   <button type="submit" className="btn btn-hosting-menu p-2 mx-2" onClick={this.showHostingMenuFunc}>
                     Hosting
-                    <span className="ml-2">
-                      
-                    </span>
                     
                     {(showHostingMenu)
                       ? (<div className="hosting-menu">
