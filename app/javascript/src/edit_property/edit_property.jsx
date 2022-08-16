@@ -1,7 +1,7 @@
 // edit_property.jsx
 import React from 'react';
 import Layout from '@src/layout';
-import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import { safeCredentialsFormData, handleErrors } from '@utils/fetchHelper';
 
 // Importing stylesheet
 import './edit_property.scss';
@@ -66,7 +66,7 @@ class EditProperty extends React.Component {
     //   formData.append('property[image]', this.state.selectedFile, this.state.selectedFile.name);
     // }
 
-    fetch(`/api/properties/${this.props.data.property_id}`, safeCredentials({
+    fetch(`/api/properties/${this.props.data.property_id}`, safeCredentialsFormData({
       method: 'PATCH',
       body: formData,
     }))
