@@ -43,7 +43,7 @@ class Property extends React.Component {
       bedrooms,
       beds,
       baths,
-      image_url,
+      image,
       user,
     } = property
 
