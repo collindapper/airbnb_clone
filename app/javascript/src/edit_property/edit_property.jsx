@@ -62,9 +62,9 @@ class EditProperty extends React.Component {
     formData.append('property[baths]', this.state.baths)
     formData.append('property[price_per_night]', this.state.price_per_night)
 
-    // if (this.state.selectedFile !== null) {
-    //   formData.append('property[image]', this.state.selectedFile, this.state.selectedFile.name);
-    // }
+    if (this.state.selectedFile !== null) {
+      formData.append('property[image]', this.state.selectedFile, this.state.selectedFile.name);
+    }
 
     fetch(`/api/properties/${this.props.data.property_id}`, safeCredentialsFormData({
       method: 'PATCH',

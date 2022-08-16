@@ -37,7 +37,7 @@ class PropertyReservations extends React.Component {
         <div className="container py-4">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h4 className="mb-0">Property reservations</h4>
-            <a className="btn btn-my-bookings p-2 mx-2" role="button" href={`/iti100/reservations`}><FontAwesomeIcon icon={ faCalendarDays } className="mr-2" />View all reservations</a>
+            <a className="btn btn-my-bookings p-2 mx-2" role="button" href={`/iti100/reservations`}>View all reservations</a>
           </div>
 
           {(propertyBookings.length != 0)

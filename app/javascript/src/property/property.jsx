@@ -43,14 +43,14 @@ class Property extends React.Component {
       bedrooms,
       beds,
       baths,
-      image,
+      image_url,
       user,
     } = property
 
     console.log(property);
     console.log(property.user);
     console.log(property.user.username);
-    console.log(image);
+    console.log(image_url);
 
     return (
       <Layout>
