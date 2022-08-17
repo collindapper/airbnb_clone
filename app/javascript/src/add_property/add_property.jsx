@@ -56,7 +56,7 @@ class AddProperty extends React.Component {
     formData.append('property[price_per_night]', this.state.price_per_night)
 
     if (this.state.image_url !== null) {
-      formData.append('property[image_url]', this.state.image_url, this.state.image_url.name);
+      formData.append('property[image]', this.state.image, this.state.image.name);
     }
 
     fetch('/api/properties', safeCredentialsFormData({

@@ -47,5 +47,5 @@ Rails.application.routes.draw do
 
   end
 
-  get '*path' => 'static_pages#home'
+  # get '*path' => 'static_pages#home'
 end
