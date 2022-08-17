@@ -93,9 +93,9 @@ class Listings extends React.Component {
                           <p className="mb-0 text-secondary">$ {property.price_per_night} per night</p>
                         </div>
                         <div className="d-flex">
-                          <a className="btn btn-danger btn-sm btn-edit mr-2 mt-2" role="button" href={`/property/${property.id}/edit-property`}>Edit property</a>
-                          <a className="btn btn-danger btn-sm btn-edit mr-2 mt-2" role="button" href={`/property/${property.id}/reservations`}>View property reservations</a>
-                          <button type="submit" className="btn btn-danger btn-sm btn-delete ml-auto mr-2 mt-2" onClick={this.deleteProperty}>Delete property</button>
+                          <a className="btn btn-danger btn-sm btn-edit me-2 mt-2" role="button" href={`/property/${property.id}/edit-property`}>Edit property</a>
+                          <a className="btn btn-danger btn-sm btn-edit me-2 mt-2" role="button" href={`/property/${property.id}/reservations`}>View property reservations</a>
+                          <button type="submit" className="btn btn-danger btn-sm btn-delete ml-auto me-2 mt-2" onClick={this.deleteProperty}>Delete property</button>
                         </div>
                       </div>
                     </div>
