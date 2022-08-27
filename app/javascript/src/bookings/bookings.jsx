@@ -75,10 +75,10 @@ class Bookings extends React.Component {
                 return (
                   <div key={booking.id} id={booking.id} className="bookings-wrap p-4 mb-3">
                     <div className="row d-flex">
-                      <div className="col-3">
+                      <div className="col-md-3">
                         <div className="property-image" style={{ backgroundImage: `url(${booking.property.image})` }} />
                         </div>
-                      <div className="col-5">
+                      <div className="col-md-5">
                         <div className="row d-flex flex-column px-3">
                           <p className="mb-1 text-secondary">{booking.city}</p>
                           <h6 className="mb-1">{booking.property.title}</h6>
@@ -86,7 +86,7 @@ class Bookings extends React.Component {
                           <p className="mb-1 text-secondary">{booking.start_date} - {booking.end_date}</p>
                         </div>
                       </div>
-                      <div className="col-4">
+                      <div className="col-md-4">
                         <div className="row d-flex flex-column px-3">
                           <div className="d-flex justify-content-between">
                             <p className="mb-1"><b>Total (USD)</b></p>
