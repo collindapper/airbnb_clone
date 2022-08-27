@@ -11,7 +11,6 @@
 }
 
 // Additional helper methods
-
 export function getMetaContent(name) {
   const header = document.querySelector(`meta[name="${name}"]`);
   return header && header.content;
