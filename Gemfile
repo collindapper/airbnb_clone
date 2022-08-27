@@ -36,6 +36,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Use Stripe for receiving payments
 gem 'stripe'
 
+# FontAwesome
+gem "font-awesome-sass", "~> 6.1.2"
+
 # AWS S3
 gem 'aws-sdk', '~> 3.0'
 
