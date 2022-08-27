@@ -11,7 +11,6 @@
 }
 
 // Additional helper methods
-
 export function getMetaContent(name) {
   const header = document.querySelector(`meta[name="${name}"]`);
   return header && header.content;
@@ -37,6 +36,15 @@ export function safeCredentials(options = {}) {
     credentials: 'include',
     mode: 'same-origin',
     headers: Object.assign((options.headers || {}), authenticityHeader(), jsonHeader()),
+  });
+}
+
+// Use this function instead if you are using formData as body when uploading images
+export function safeCredentialsFormData(options = {}) {
+  return Object.assign(options, {
+    credentials: 'include',
+    mode: 'same-origin',
+    headers: Object.assign((options.headers || {}), authenticityHeader()),
   });
 }
 

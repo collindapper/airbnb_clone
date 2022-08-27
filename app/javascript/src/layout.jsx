@@ -39,7 +39,7 @@ class Layout extends React.Component  {
     }))
       .then(handleErrors)
       .then(data => {
-        
+        console.log('data', data)
         if (data.success) {
           this.setState({
             authenticated: false,
@@ -65,6 +65,7 @@ class Layout extends React.Component  {
 
             ? <nav className="navbar navbar-expand d-flex justify-content-between" id="navbar">
                 <a className="navbar-brand text-danger" href="/">
+                  <i className="fab fa-airbnb me-2"></i>
                   <b >airbnb</b>
                 </a>
                 <div className="me-auto">

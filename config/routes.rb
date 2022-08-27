@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   get '/property/:id'               => 'static_pages#property'
   get '/login'                      => 'static_pages#login'
-  get '/:username/bookings'                   => 'static_pages#bookings'
-  get '/:username/listings'                   => 'static_pages#listings'
-  get '/:username/add-property'               => 'static_pages#add_property'
+  get '/:username/bookings' => 'static_pages#bookings'
+  get '/:username/listings'  => 'static_pages#listings'
+  get '/:username/add-property'  => 'static_pages#add_property'
   get '/property/:id/edit-property' => 'static_pages#edit_property'
   get '/property/:id/reservations'  => 'static_pages#property_reservations'
-  get '/:username/reservations'                => 'static_pages#reservations'
-  get '/booking/:id/success'        => 'static_pages#booking_success'
+  get '/:username/reservations'  => 'static_pages#reservations'
+  get '/booking/:id/success'  => 'static_pages#booking_success'
 
 
   namespace :api do
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     post '/properties'                  => 'properties#create'
     get '/properties/'                => 'properties#index'
     get '/properties/:id'             => 'properties#show'
-    get '/users/:username/properties'   => 'properties#index_by_user'
+    get '/users/:username/properties' => 'properties#index_by_user'
     patch '/properties/:id'           => 'properties#update'
     delete '/properties/:id'           => 'properties#destroy'
 
@@ -47,5 +47,5 @@ Rails.application.routes.draw do
 
   end
 
-  get '*path' => 'static_pages#home'
+  # get '*path' => 'static_pages#home'
 end

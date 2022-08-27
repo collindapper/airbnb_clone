@@ -1,7 +1,7 @@
 // add_property.jsx
 import React from 'react';
 import Layout from '@src/layout';
-import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import { safeCredentialsFormData, handleErrors } from '@utils/fetchHelper';
 
 // Importing stylesheet
 import './add_property.scss';
@@ -55,11 +55,11 @@ class AddProperty extends React.Component {
     formData.append('property[baths]', this.state.baths)
     formData.append('property[price_per_night]', this.state.price_per_night)
 
-    if (this.state.image !== null) {
+    if (this.state.image_url !== null) {
       formData.append('property[image]', this.state.image, this.state.image.name);
     }
 
-    fetch('/api/properties', safeCredentials({
+    fetch('/api/properties', safeCredentialsFormData({
       method: 'POST',
       body: formData,
     }))
@@ -210,7 +210,7 @@ class AddProperty extends React.Component {
                 <label htmlFor="propertyImage" className="col-form-label">Upload photos</label>
               </div>
               <div className="col-auto">
-                <input className="form-control" id="propertyImage" type="file" name="image" onChange={this.onFileChange} />
+                <input className="form-control" id="propertyImage" type="file" name="image" accept="image/*" onChange={this.onFileChange} />
               </div>
             </div>
               <div className="d-flex justify-content-center mx-auto my-5">

@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -36,14 +36,15 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Use Stripe for receiving payments
 gem 'stripe'
 
+# FontAwesome
+gem "font-awesome-sass", "~> 6.1.2"
+
 # AWS S3
-gem 'aws-sdk-s3', '~> 1.112'
+gem 'aws-sdk', '~> 3.0'
 
 # Webrick
 gem "webrick", "~> 1.7"
 
- # Use sqlite3 as the database for Active Record
- gem 'sqlite3', '~> 1.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -74,6 +75,9 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # Use sqlite3 as the database for Active Record
+ gem 'sqlite3', '~> 1.4.2'
 end
 
 group :production do
