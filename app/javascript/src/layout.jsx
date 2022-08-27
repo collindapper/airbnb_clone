@@ -63,13 +63,13 @@ class Layout extends React.Component  {
       <React.Fragment>
           {(authenticated)
 
-            ? <nav className="navbar navbar-expand d-flex justify-content-between" id="navbar">
+            ? <nav className="navbar navbar-expand d-flex px-md-5 px-2" id="navbar">
                 <a className="navbar-brand text-danger" href="/">
-                  <i className="fab fa-airbnb me-2"></i>
-                  <b >airbnb</b>
+                  <i className="fab fa-airbnb me-md-2"></i>
+                  <b className="d-md-inline d-none">airbnb</b>
                 </a>
-                <div className="me-auto">
-                  <a className="btn btn-my-bookings p-2 mx-2" role="button" href={`/${username}/bookings`}>My bookings</a>
+                <div className="me-auto d-flex">
+                  <a className="btn btn-my-bookings p-2 mx-md-2 mx-1" role="button" href={`/${username}/bookings`}>My bookings</a>
                   <button type="submit" className="btn btn-hosting-menu p-2 mx-2" onClick={this.showHostingMenuFunc}>
                     Hosting
                     
@@ -94,7 +94,7 @@ class Layout extends React.Component  {
                 <button type="submit" className="btn btn-outline-danger btn-logout" onClick={this.logout}>Log out @{username}</button>
               </nav>
 
-            : <nav className="navbar navbar-expand d-flex justify-content-between" id="navbar">
+            : <nav className="navbar navbar-expand d-flex justify-content-between px-md-5 px-2" id="navbar">
                 <a className="navbar-brand text-danger" href="/">
                   
                   <b className="pl-2" >airbnb</b>

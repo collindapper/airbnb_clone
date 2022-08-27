@@ -47,7 +47,7 @@ class Reservations extends React.Component {
           ?
           <div>
             <div className="reservations-header-row p-4 mb-1">
-              <div className="row no-gutters d-flex justify-content-between align-items-center text-center">
+              <div className="row no-gutters d-md-flex d-none justify-content-between align-items-center text-center">
                 <div className="col-2">
                 <p className="mb-2">Property image</p>
                 </div>
@@ -79,38 +79,38 @@ class Reservations extends React.Component {
               return (
                 <div key={booking.id} id={booking.id} className="reservations-wrap p-4 mb-3">
                   <div className="row no-gutters d-flex justify-content-between align-items-center text-center">
-                    <div className="col-2">
+                    <div className="col-md-2">
                       <div className="property-image rounded" style={{ backgroundImage: `url(${booking.property.image})` }} ></div>
                     </div>
-                    <div className="col-2">
+                    <div className="col-md-2">
                       <p className="mb-2">{booking.property.title}</p>
                     </div>
-                    <div className="col-1">
+                    <div className="col-md-1">
                       <p className="mb-2">{booking.property.id}</p>
                     </div>
-                    <div className="col-1">
+                    <div className="col-md-1">
                       <p className="mb-2">{booking.start_date}</p>
                     </div>
-                    <div className="col-1">
+                    <div className="col-md-1">
                       <p className="mb-2">{booking.end_date}</p>
                     </div>
-                    <div className="col-1">
+                    <div className="col-md-1">
                       <p className="mb-2">{booking.user.username}</p>
                     </div>
                     
                     {/* If user has paid for the booking, show "paid", if not, show "pending" */}
                     {(booking.is_paid)
 
-                    ? <div className="col-1">
+                    ? <div className="col-md-1">
                         <p className="mb-2 text-success">Paid</p>
                       </div>
 
-                    : <div className="col-1">
+                    : <div className="col-md-1">
                         <p className="mb-2 text-danger">Pending</p>
                       </div>
                     }
 
-                    <div className="col-2 d-inline-flex justify-content-center">
+                    <div className="col-md-2 d-inline-flex justify-content-center">
                       <button type="button" className="btn btn-danger btn-sm">Message guest</button>
                     </div>
                   </div>
