@@ -35,14 +35,12 @@ class SignupWidget extends React.Component {
     }))
       .then(handleErrors)
       .then(data => {
-        if (data.user) {
-          this.login();
-        }
       })
       .catch(error => {
         this.setState({
           error: 'Could not sign up.',
         })
+        this.login();
       })
   }
 
@@ -75,6 +73,7 @@ class SignupWidget extends React.Component {
         })
       })
   }
+
 
   render () {
     const { email, password, username, error } = this.state;
