@@ -61,17 +61,26 @@ class BookingWidget extends React.Component {
       })
       .catch(error => {
         console.log(error);
+        console.log('error');
       })
   }
 
+  
+  onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
+
+  onFocusChange = (focusedInput) => this.setState({ focusedInput })
+
+  isDayBlocked = day => this.state.existingBookings.filter(b => day.isBetween(b.start_date, b.end_date, 'day', '[)')).length > 0
+  
+
   initiateStripeCheckout = (booking_id) => {
-    return fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
+    fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
       method: 'POST',
     }))
       .then(handleErrors)
       .then(response => {
         const stripe = Stripe(`${process.env.STRIPE_PUBLISHABLE_KEY}`);
-  
+        console.log('response', response)
         stripe.redirectToCheckout({
           // Make the id field from the Checkout Session creation API response
           // available to this file, so you can provide it as parameter here
@@ -81,18 +90,13 @@ class BookingWidget extends React.Component {
           // If `redirectToCheckout` fails due to a browser or network
           // error, display the localized error message to your customer
           // using `result.error.message`.
+          console.log('result', result)
         });
       })
       .catch(error => {
-        console.log(error);
+        console.log('error', error);
       })
   }
-
-  onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
-
-  onFocusChange = (focusedInput) => this.setState({ focusedInput })
-
-  isDayBlocked = day => this.state.existingBookings.filter(b => day.isBetween(b.start_date, b.end_date, 'day', '[)')).length > 0
 
 
   render () {

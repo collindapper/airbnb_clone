@@ -29,7 +29,6 @@ module Api
 
       if user
         @bookings = []
-
         user.properties.each do |property|
           @bookings += property.bookings
         end
