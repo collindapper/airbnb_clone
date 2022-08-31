@@ -64,6 +64,13 @@ class BookingWidget extends React.Component {
       })
   }
 
+  onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
+
+  onFocusChange = (focusedInput) => this.setState({ focusedInput })
+
+  isDayBlocked = day => this.state.existingBookings.filter(b => day.isBetween(b.start_date, b.end_date, 'day', '[)')).length > 0
+  
+
   initiateStripeCheckout = (booking_id) => {
     return fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
       method: 'POST',
@@ -87,12 +94,6 @@ class BookingWidget extends React.Component {
         console.log(error);
       })
   }
-
-  onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
-
-  onFocusChange = (focusedInput) => this.setState({ focusedInput })
-
-  isDayBlocked = day => this.state.existingBookings.filter(b => day.isBetween(b.start_date, b.end_date, 'day', '[)')).length > 0
 
 
   render () {
