@@ -57,7 +57,7 @@ class BookingWidget extends React.Component {
     }))
       .then(handleErrors)
       .then(response => {
-        return this.initiateStripeCheckout(response.booking.id)
+        this.initiateStripeCheckout(response.booking.id)
       })
       .catch(error => {
         console.log(error);
@@ -65,7 +65,7 @@ class BookingWidget extends React.Component {
       })
   }
 
-  
+
   onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
 
   onFocusChange = (focusedInput) => this.setState({ focusedInput })
