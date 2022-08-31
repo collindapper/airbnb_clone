@@ -73,7 +73,7 @@ class BookingWidget extends React.Component {
   
 
   initiateStripeCheckout = (booking_id) => {
-    return fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
+    fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
       method: 'POST',
     }))
       .then(handleErrors)
