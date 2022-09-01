@@ -17,7 +17,7 @@ class BookingSuccess extends React.Component {
 
   componentDidMount() {
     const booking_id = this.props.booking_id;
-    // console.log(booking_id);
+    console.log(booking_id);
 
     fetch(`/api/bookings/${booking_id}`)
       .then(handleErrors)

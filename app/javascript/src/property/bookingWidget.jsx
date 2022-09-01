@@ -57,7 +57,7 @@ class BookingWidget extends React.Component {
     }))
       .then(handleErrors)
       .then(response => {
-        this.initiateStripeCheckout(response.booking.id)
+        return this.initiateStripeCheckout(response.booking.id)
       })
       .catch(error => {
         console.log('submit booking error', error);
