@@ -60,8 +60,7 @@ class BookingWidget extends React.Component {
         this.initiateStripeCheckout(response.booking.id)
       })
       .catch(error => {
-        console.log(error);
-        console.log('error');
+        console.log('submit booking error', error);
       })
   }
 
@@ -94,7 +93,7 @@ class BookingWidget extends React.Component {
         });
       })
       .catch(error => {
-        console.log('error', error);
+        console.log('initiate stripe error', error);
       })
   }
 
