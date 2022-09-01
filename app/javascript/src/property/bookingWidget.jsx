@@ -57,15 +57,14 @@ class BookingWidget extends React.Component {
     }))
       .then(handleErrors)
       .then(response => {
-        return this.initiateStripeCheckout(response.booking.id)
+        this.initiateStripeCheckout(response.booking.id)
       })
       .catch(error => {
-        console.log(error);
-        console.log('error');
+        console.log('submit booking error', error);
       })
   }
 
-  
+
   onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
 
   onFocusChange = (focusedInput) => this.setState({ focusedInput })
@@ -94,7 +93,7 @@ class BookingWidget extends React.Component {
         });
       })
       .catch(error => {
-        console.log('error', error);
+        console.log('initiate stripe error', error);
       })
   }
 
