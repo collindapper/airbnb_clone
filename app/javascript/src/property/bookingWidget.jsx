@@ -57,13 +57,12 @@ class BookingWidget extends React.Component {
     }))
       .then(handleErrors)
       .then(response => {
-        this.initiateStripeCheckout(response.booking.id)
+        return this.initiateStripeCheckout(response.booking.id)
       })
       .catch(error => {
         console.log('submit booking error', error);
       })
   }
-
 
   onDatesChange = ({ startDate, endDate }) => this.setState({ startDate, endDate })
 
@@ -73,7 +72,7 @@ class BookingWidget extends React.Component {
   
 
   initiateStripeCheckout = (booking_id) => {
-    fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
+    return fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
       method: 'POST',
     }))
       .then(handleErrors)
