@@ -48,9 +48,6 @@ class Property extends React.Component {
     } = property
 
     console.log(property);
-    console.log(property.user);
-    console.log(property.user.username);
-    console.log(image);
 
     return (
       <Layout>
