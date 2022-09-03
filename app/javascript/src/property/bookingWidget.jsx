@@ -88,7 +88,7 @@ class BookingWidget extends React.Component {
           // If `redirectToCheckout` fails due to a browser or network
           // error, display the localized error message to your customer
           // using `result.error.message`.
-          console.log('result', result)
+          console.log('result', result.error.message)
         });
       })
       .catch(error => {
